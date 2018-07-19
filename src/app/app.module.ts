@@ -4,16 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './shared/user/user.service';
-import { UserListComponent } from './user-list/user-list.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './/app-routing.module';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
